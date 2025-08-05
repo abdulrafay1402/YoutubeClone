@@ -5,11 +5,12 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #0f0f0f;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
 
+/* Header Styles */
 .header {
     display: flex;
     justify-content: space-between;
@@ -145,7 +146,7 @@ body {
     transform: scale(1.1);
 }
 
-.notification>span {
+.notification > span {
     position: relative;
     top: -5px;
     right: -1px;
@@ -167,6 +168,7 @@ body {
     transform: scale(1.1);
 }
 
+/* Sidebar Styles */
 .sidebar {
     position: fixed;
     top: 56px;
@@ -204,6 +206,25 @@ body {
     text-align: center;
 }
 
+/* Developer Section in Sidebar */
+.developer-section {
+    margin-top: auto;
+    border-top: 1px solid #383838;
+    padding-top: 20px;
+}
+
+.developer-section .sidebar-item {
+    font-size: 12px;
+    color: #aaaaaa;
+    padding: 8px 24px;
+}
+
+.developer-section .sidebar-item i {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Main Content Styles */
 .main-content {
     margin-top: 56px;
     margin-left: 240px;
@@ -265,6 +286,77 @@ body {
     margin: 0;
 }
 
+/* Footer Styles */
+.footer {
+    background-color: #0f0f0f;
+    border-top: 1px solid #383838;
+    padding: 40px 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.footer .logo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .logo i {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.footer .logo:hover i {
+    transform: scale(1.1);
+}
+
+.footer .developer-info {
+    text-align: left;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .developer-info p {
+    margin: 8px 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.footer .developer-info a {
+    color: #3ea6ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer .developer-info a:hover {
+    color: #65b8ff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 1200px) {
     .box {
         flex: 1 1 calc(33.333% - 15px);
@@ -277,124 +369,28 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-
+@media only screen and (max-width: 768px) {
     .search-bar {
         width: 300px;
     }
-
+    
     .box {
-        flex: 1 1 calc(100% - 15px);
+        flex: 1 1 calc(50% - 15px);
     }
-
+    
     .sidebar {
         width: 200px;
     }
-
+    
     .main-content {
         margin-left: 200px;
     }
-
+    
     .header-logo span {
         display: none;
     }
-}
-
-@media (max-width: 480px) {
-    .search-bar {
-        width: 200px;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
-    .header-logo span {
-        display: none;
-    }
-
-    .rightHeader {
-        display: none;
-    }
-
-    .middleHeader {
-        width: 100%;
-    }
-
-    /* Developer Section in Sidebar */
-    .developer-section {
-        margin-top: auto;
-        border-top: 1px solid #383838;
-        padding-top: 20px;
-    }
-
-    .developer-section .sidebar-item {
-        font-size: 12px;
-        color: #aaaaaa;
-        padding: 8px 24px;
-    }
-
-    .developer-section .sidebar-item i {
-        color: #ff0000;
-        font-size: 14px;
-    }
-
-    /* Footer */
-    .footer {
-        background-color: #0f0f0f;
-        border-top: 1px solid #383838;
-        padding: 30px 0;
-        margin-top: 40px;
-    }
-
-    .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .footer .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer .logo i {
-        font-size: 2rem;
-    }
-
-    .footer .developer-info {
-        text-align: left;
-    }
-
-    .footer .developer-info p {
-        margin: 5px 0;
-        color: #ffffff;
-        font-size: 16px;
-    }
-
-    .footer .developer-info a {
-        color: #3ea6ff;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .footer .developer-info a:hover {
-        text-decoration: underline;
-    }
-}
-
-/* Responsive adjustments for footer and developer info */
-@media only screen and (max-width: 768px) {
+    
+    /* Footer responsive */
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -412,18 +408,48 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+    .search-bar {
+        width: 200px;
+    }
+    
+    .box {
+        flex: 1 1 calc(100% - 15px);
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    .header-logo span {
+        display: none;
+    }
+    
+    .rightHeader {
+        display: none;
+    }
+    
+    .middleHeader {
+        width: 100%;
+    }
+    
+    /* Footer responsive */
     .footer {
         padding: 20px 0;
     }
-
+    
     .footer-content {
         padding: 0 15px;
     }
-
+    
     .footer .developer-info p {
         font-size: 14px;
     }
-
+    
     .main-developer-info .developer-info p {
         font-size: 12px;
     }
@@ -433,13 +459,20 @@ body {
     .leftHeader > i {
         display: none;
     }
-    .leftHeader > .header-logo{
+    
+    .leftHeader > .header-logo {
         margin-left: -20px;
     }
-    .middleHeader .microphone{
+    
+    .middleHeader .microphone {
         display: none;
     }
-    .search-bar{
+    
+    .search-bar {
         width: 90%;
+    }
+    
+    .footer .developer-info p {
+        font-size: 13px;
     }
 }
