@@ -177,6 +177,7 @@ body {
     z-index: 1;
     overflow-y: auto;
     border-right: 1px solid #303030;
+    scrollbar-width: none;
 }
 
 .sidebar-section {
