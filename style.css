@@ -316,3 +316,111 @@ body {
         display: none;
     }
 }
+
+/* Developer Section in Sidebar */
+.developer-section {
+    margin-top: auto;
+    border-top: 1px solid #383838;
+    padding-top: 20px;
+}
+
+.developer-section .sidebar-item {
+    font-size: 12px;
+    color: #aaaaaa;
+    padding: 8px 24px;
+}
+
+.developer-section .sidebar-item i {
+    color: #ff0000;
+    font-size: 14px;
+}
+/* Footer */
+.footer {
+    background-color: #0f0f0f;
+    border-top: 1px solid #383838;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .logo::before {
+    content: "YT";
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer .developer-info {
+    text-align: left;
+}
+
+.footer .developer-info p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.footer .developer-info a {
+    color: #3ea6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer .developer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for footer and developer info */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer .developer-info {
+        text-align: center;
+    }
+    
+    .main-developer-info {
+        margin-top: 30px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 0;
+    }
+    
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .footer .developer-info p {
+        font-size: 14px;
+    }
+    
+    .main-developer-info .developer-info p {
+        font-size: 12px;
+    }
+}
