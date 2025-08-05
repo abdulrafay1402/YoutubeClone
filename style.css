@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #0f0f0f;
+    background-color: #000000;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
@@ -219,7 +219,7 @@ body {
 .box {
     flex: 1 1 calc(25% - 15px);
     min-width: 280px;
-    background-color: #212121;
+    background-color: #000000;
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -264,7 +264,6 @@ body {
     margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .box {
         flex: 1 1 calc(33.333% - 15px);
@@ -278,6 +277,7 @@ body {
 }
 
 @media (max-width: 768px) {
+    
     .search-bar {
         width: 300px;
     }
